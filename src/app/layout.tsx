@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "InvestaSim — Calculadora de Juros Compostos",
+  title: "InvistaSim — Calculadora de Juros Compostos",
   description: "Simule investimentos com juros compostos. Veja como seu dinheiro cresce com dados reais do mercado brasileiro.",
 };
 
