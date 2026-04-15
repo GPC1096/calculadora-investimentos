@@ -2,8 +2,8 @@
   <!-- círculo -->
   <circle cx="16" cy="16" r="16" fill="#00b8ff"/>
 
-  <!-- grupo reduzido e centralizado -->
-  <g transform="translate(2,2) scale(0.75)">
+  <!-- escala centralizada -->
+  <g transform="translate(16,16) scale(0.75) translate(-16,-16)">
     <path d="M5 23 L10 12 L16 18 L22 7 L27 14"
           stroke="white"
           stroke-width="3"
