@@ -70,7 +70,9 @@ function NewsItemRow({ item, index }: { item: NewsItem; index: number }) {
           </span>
           {item.pubDate && (
             <span className="text-xs" style={{ color: 'var(--text-muted)' }}>
-              {item.pubDate}
+              {new Date(item.pubDate).toLocaleString('pt-BR', {
+  timeZone: 'America/Sao_Paulo'
+})}
             </span>
           )}
         </div>
