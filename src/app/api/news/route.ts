@@ -122,12 +122,13 @@ function formatPubDate(raw: string): string {
   try {
     const d = new Date(raw);
     if (isNaN(d.getTime())) return raw;
-    return d.toLocaleDateString('pt-BR', {
-      day: '2-digit',
-      month: 'short',
-      hour: '2-digit',
-      minute: '2-digit',
-    });
+    return d.toLocaleString('pt-BR', {
+  timeZone: 'America/Sao_Paulo',
+  day: '2-digit',
+  month: 'short',
+  hour: '2-digit',
+  minute: '2-digit',
+});
   } catch {
     return raw;
   }
