@@ -68,11 +68,18 @@ function NewsItemRow({ item, index }: { item: NewsItem; index: number }) {
           >
             {item.source}
           </span>
-          {item.pubDate && (
-            <span className="text-xs" style={{ color: 'var(--text-muted)' }}>
-              {new Date(item.pubDate).toLocaleString('pt-BR', {
-  timeZone: 'America/Sao_Paulo'
-})}
+         {item.pubDate && (
+  <span className="text-xs" style={{ color: 'var(--text-muted)' }}>
+    {(() => {
+      const data = new Date(item.pubDate)
+      return isNaN(data)
+        ? item.pubDate
+        : data.toLocaleString('pt-BR', {
+            timeZone: 'America/Sao_Paulo'
+          })
+    })()}
+  </span>
+)}
             </span>
           )}
         </div>
