@@ -70,16 +70,7 @@ function NewsItemRow({ item, index }: { item: NewsItem; index: number }) {
           </span>
           {item.pubDate && (
             <span className="text-xs" style={{ color: 'var(--text-muted)' }}>
-              {(() => {
-  const d = new Date(item.pubDate)
-  d.setHours(d.getHours() - 3)
-  return d.toLocaleString('pt-BR', {
-    day: '2-digit',
-    month: 'short',
-    hour: '2-digit',
-    minute: '2-digit'
-  })
-})()}
+            {item.pubDate}
             </span>
           )}
         </div>
